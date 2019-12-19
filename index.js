@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 let title = document.querySelector('#title')
 let year = document.querySelector('#year')
 let description = document.querySelector('#description')
-let ul = document.querySelector('reviews')
+let ul = document.querySelector('#reviews')
 let select = document.querySelector('select')
+let form =  document.querySelector('form')
 // let Movies = `https://ghibliapi.herokuapp.com/films`
 
 //get data 
@@ -31,8 +32,9 @@ movies.forEach(movie => {
 getMovies(printMovies,'https://ghibliapi.herokuapp.com/films')
 
 select.addEventListener('change', (event) => {
+    ul.innerHTML = ""
     getMovies(printAbout,`https://ghibliapi.herokuapp.com/films/${event.target.value}`)
-
+    
 })
 
 const printAbout = (movie) =>{
@@ -41,6 +43,12 @@ const printAbout = (movie) =>{
     description.innerText = movie.description
 }
 
+form.addEventListener('submit',(event) =>{
+    event.preventDefault()
+    let li = document.createElement('li')
+    li.innerText = `${title.innerText}: userInput.value`
+    ul.appendChild(li)
 
+})
 
 })

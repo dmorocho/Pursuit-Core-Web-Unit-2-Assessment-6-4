@@ -1,0 +1,17 @@
+body{
+    font-family: monospace;
+    background: lavender;
+    justify-content: center;
+}
+
+header{
+    Width: 70%;
+    Height: 150px;
+    display: flex;
+    flex-direction: row;
+    background: skyblue;
+}
+
+main{
+    width: 60%;
+}
