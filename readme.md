@@ -25,12 +25,12 @@ Assume default styling unless explicitly articulated here. **Do not** utilize CS
 Your website should be responsive and work on screens of different sizes.
 
 - **Body**
-  - Monospace font for all text (inputs excepted - default is fine).
-  - `lavender` background color.
+  <!-- - Monospace font for all text (inputs excepted - default is fine). -->
+  <!-- - `lavender` background color. -->
   - Arrange content in a column, centered on the page width-wise.
 - **Header**
-  - Header should contain the `image` and `h1` tags.
-  - Width: 70 percent. Height: 150px.
+  <!-- - Header should contain the `image` and `h1` tags. -->
+  <!-- - Width: 70 percent. Height: 150px. -->
   - Image and header text should be horizontally oriented.
   - Image and header text should be on opposite sides of the header. Vertically, they should both be positioned in the center of their containing `div`.
   - Image should have the same height as the header (150px).

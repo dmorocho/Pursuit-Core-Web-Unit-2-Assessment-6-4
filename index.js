@@ -9,6 +9,7 @@ let form =  document.querySelector('form')
 
 //get data 
 const getMovies = async (callback,url)  =>{
+    form.style.display = "none"
     try{
         let res = await axios.get(url)
         let data = res.data
@@ -33,11 +34,13 @@ getMovies(printMovies,'https://ghibliapi.herokuapp.com/films')
 
 select.addEventListener('change', (event) => {
     ul.innerHTML = ""
+   
     getMovies(printAbout,`https://ghibliapi.herokuapp.com/films/${event.target.value}`)
     
 })
 
 const printAbout = (movie) =>{
+    form.style.display = "block"
     title.innerText = movie.title
     year.innerText = movie.release_date
     description.innerText = movie.description
@@ -46,8 +49,9 @@ const printAbout = (movie) =>{
 form.addEventListener('submit',(event) =>{
     event.preventDefault()
     let li = document.createElement('li')
-    li.innerText = `${title.innerText}: userInput.value`
+    li.innerText = `${title.innerText}: ${userInput.value}`
     ul.appendChild(li)
+    userInput.value =""
 
 })
 
